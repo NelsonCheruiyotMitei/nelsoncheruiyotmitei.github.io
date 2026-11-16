@@ -49,7 +49,7 @@ Copy any block inside `projects: [ ... ]` in `data.js`, paste it below, change t
 
 ## Custom domain (optional)
 
-Buy a domain (e.g. `MELgenius.co.ke`), then in **Settings → Pages → Custom domain** enter it and follow GitHub's DNS instructions.
+Buy a domain (e.g. `melgenius.co.ke`), then in **Settings → Pages → Custom domain** enter it and follow GitHub's DNS instructions.
 
 ## Note on the demo dashboard
 

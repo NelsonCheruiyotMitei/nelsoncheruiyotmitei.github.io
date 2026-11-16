@@ -70,7 +70,11 @@
         <div class="section-head reveal">
           <p class="kicker">01 · How I work</p>
           <h2>My career as a Theory of Change</h2>
-          <p>Click any box to see the story behind it and follow the results chain from inputs to impact.</p>
+          <p>Click any box to see the indicator, the evidence and the assumption behind it, or let the chain play through on its own.</p>
+        </div>
+        <div class="toc-bar reveal">
+          <button class="btn btn-sm" id="tocWalk">▶ Walk me through it</button>
+          <span class="muted" id="tocStep"></span>
         </div>
         <div class="toc-wrap reveal">
           <svg class="toc-lines" id="tocLines"></svg>
@@ -78,6 +82,14 @@
         </div>
         <div class="toc-detail" id="tocDetail" aria-live="polite">
           <p class="muted">Select a box above to read more.</p>
+        </div>
+        <div class="assume reveal">
+          <h3 id="assumeTitle"></h3>
+          <div class="assume-grid" id="assumeGrid"></div>
+        </div>
+        <div class="methods reveal">
+          <h3>My MEL approach</h3>
+          <div class="method-list" id="methodList"></div>
         </div>
       </div>
     </section>

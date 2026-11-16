@@ -1,4 +1,4 @@
-/* MEL Genius portfolio — interactive behaviour. Content lives in data.js */
+/* MEAL Genius portfolio — interactive behaviour. Content lives in data.js */
 (() => {
   const P = window.PORTFOLIO;
   const $ = (s, el = document) => el.querySelector(s);
@@ -108,12 +108,12 @@
   const nodes = {}, colOf = {};
   P.toc.forEach(col => {
     const cEl = h("div", "toc-col"); cEl.dataset.col = col.col;
-    cEl.append(h("h3", null, col.col));
+    cEl.append(h("h3", null, col.col + (col.stat ? `<span class="toc-stat">${col.stat}</span>` : "")));
     const wrap = h("div", "toc-items"); cEl.append(wrap);
     col.items.forEach(it => {
       const b = h("button", "toc-node", it.t); b.dataset.id = it.id;
       nodes[it.id] = { ...it, el: b }; colOf[it.id] = col.col;
-      b.addEventListener("click", () => selectToc(it.id));
+      b.addEventListener("click", () => { stopWalk(); selectToc(it.id); });
       wrap.append(b);
     });
     grid.append(cEl);
@@ -131,6 +131,7 @@
       p.dataset.a = a; p.dataset.b = b; svg.append(p);
     });
     if (selected) markPaths(chain(selected));
+    else if (walkPath) $$("path", svg).forEach(p => p.classList.toggle("on", walkPath.indexOf(p.dataset.b) === walkPath.indexOf(p.dataset.a) + 1 && walkPath.includes(p.dataset.a)));
   }
   let selected = null;
   const markPaths = on => $$("path", svg).forEach(p => p.classList.toggle("on", on.has(p.dataset.a) && on.has(p.dataset.b)));
@@ -141,16 +142,55 @@
     goDown(id); goUp(id);
     return new Set([...down, ...up]);
   }
-  function selectToc(id) {
-    const on = chain(id), n = nodes[id];
+  function focusNodes(on, edgeOn) {
     Object.values(nodes).forEach(x => { x.el.classList.toggle("on", on.has(x.id)); x.el.classList.toggle("dim", !on.has(x.id)); });
-    selected = id; svg.classList.add("focus"); markPaths(on);
-    detail.innerHTML = `<span class="tag">${colOf[id]}</span><h4>${n.t}</h4><p class="muted">${n.d}</p>`;
+    svg.classList.add("focus");
+    $$("path", svg).forEach(p => p.classList.toggle("on", edgeOn(p.dataset.a, p.dataset.b)));
   }
+  function showDetail(id, stepText) {
+    const n = nodes[id];
+    const cell = (k, v) => v ? `<div><b>${k}</b><span>${v}</span></div>` : "";
+    detail.innerHTML = `<span class="tag">${colOf[id]}${stepText ? " · " + stepText : ""}</span><h4>${n.t}</h4><p class="muted">${n.d}</p>
+      <div class="lf">${cell("Indicator", n.ind)}${cell("Evidence", n.mov)}${cell("Example", n.ex)}${cell("Assumption", n.as)}</div>`;
+  }
+  function selectToc(id) {
+    const on = chain(id);
+    selected = id; walkPath = null;
+    focusNodes(on, (a, b) => on.has(a) && on.has(b));
+    showDetail(id);
+  }
+  // "Walk me through it": plays the tocWalk path one column at a time
+  let walkTimer = null, walkPath = null;
+  const walkBtn = $("#tocWalk"), stepEl = $("#tocStep");
+  function walkStep(i) {
+    const path = P.tocWalk || [];
+    if (i >= path.length) { stopWalk(); stepEl.textContent = "Done. Click any box to explore further."; return; }
+    const sofar = path.slice(0, i + 1), on = new Set(sofar);
+    walkPath = sofar; selected = null;
+    focusNodes(on, (a, b) => sofar.indexOf(b) === sofar.indexOf(a) + 1 && sofar.includes(a));
+    showDetail(path[i], `Step ${i + 1} of ${path.length}`);
+    stepEl.textContent = `Step ${i + 1} of ${path.length}: ${colOf[path[i]]}`;
+    walkTimer = setTimeout(() => walkStep(i + 1), 3200);
+  }
+  function stopWalk() { clearTimeout(walkTimer); walkTimer = null; walkBtn.textContent = "▶ Walk me through it"; }
+  walkBtn.addEventListener("click", () => {
+    if (walkTimer) { stopWalk(); stepEl.textContent = "Paused."; return; }
+    walkBtn.textContent = "⏸ Pause"; walkStep(0);
+  });
+
+  // Assumptions strip + method badges
+  if (P.tocAssumptions) {
+    $("#assumeTitle").textContent = P.tocAssumptions.title;
+    P.tocAssumptions.items.forEach(x => $("#assumeGrid").append(h("div", "as-card",
+      `<span class="link">${x.link}</span><p>${x.a}</p><small><b>Monitor:</b> ${x.monitor}</small><small><b>Risk:</b> ${x.risk}</small>`)));
+  }
+  (P.methods || []).forEach(m => $("#methodList").append(h("span", "method", m)));
+
   addEventListener("resize", drawLines);
   addEventListener("load", drawLines);
   if (document.fonts) document.fonts.ready.then(drawLines);
   drawLines();
+  selectToc("m1"); // open with Impact selected so the detail box is never empty
 
   /* ---------- Projects ---------- */
   const sectors = ["All", ...new Set(P.projects.map(p => p.sector))];

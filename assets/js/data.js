@@ -42,34 +42,69 @@ window.PORTFOLIO = {
   donors: ["Mastercard Foundation", "USAID", "FCDO", "European Union", "World Bank", "United Nations", "ILO", "Government of Kenya"],
 
   /* ---------- Theory of Change: my career as a results chain ---------- */
+  // Each box: t = title, d = story, then a mini logframe:
+  // ind = indicator, mov = evidence (means of verification), ex = example project, as = assumption for the next level
   toc: [
-    { col: "Inputs", items: [
-      { id: "i1", t: "ICT foundation", d: "Three national ICT roles (2018–2019): ICT Authority Digital Literacy Programme, NIIMS biometric registration and the KNBS 2019 Census. This is where I learnt to run large field data operations.", to: ["a2", "a3"] },
-      { id: "i2", t: "MSc Monitoring & Evaluation", d: "MSc Monitoring & Evaluation (JKUAT) and BSc Business Information Management (Kisii University), plus certifications in RBM, Theory of Change and Results Frameworks.", to: ["a1"] },
-      { id: "i3", t: "Data toolkit", d: "Power BI (Power Query, DAX), advanced Excel, Python, KoboToolbox, ODK, CommCare, SPSS, STATA, GIS and Make.com.", to: ["a2", "a4", "a5"] }
+    { col: "Inputs", stat: "6+ yrs · MSc M&E", items: [
+      { id: "i1", t: "ICT foundation", d: "Three national ICT roles (2018–2019): ICT Authority Digital Literacy Programme, NIIMS registration and the KNBS 2019 Census. This is where I learnt to run large field data operations.", to: ["a2", "a3"],
+        ind: "People trained on national exercises: 440+ (150 enumerators, 230+ data-capture staff, 60 teachers)", mov: "Employment records; training registers", ex: "KNBS 2019 Census · NIIMS", as: "Field teams have working devices and connectivity" },
+      { id: "i2", t: "MSc Monitoring & Evaluation", d: "MSc Monitoring & Evaluation (JKUAT) and BSc Business Information Management (Kisii University), plus certifications in RBM, Theory of Change and Results Frameworks.", to: ["a1"],
+        ind: "Formal MEL qualifications and certifications held", mov: "Degree and certificates", ex: "JKUAT · Kisii University", as: "Methods are adapted to each programme's context" },
+      { id: "i3", t: "Data toolkit", d: "Power BI (Power Query, DAX), advanced Excel, Python, KoboToolbox, ODK, CommCare, SPSS, STATA, GIS and Make.com.", to: ["a2", "a4", "a5"],
+        ind: "Analytical and digital tools in regular use: 10+", mov: "Certifications; portfolio dashboards", ex: "Power BI · Kobo · Python", as: "Clients can access and maintain the tools after handover" }
     ]},
-    { col: "Activities", items: [
-      { id: "a1", t: "Design results frameworks", d: "Theories of change, logframes (including EU intervention logic), indicator reference sheets and MEL plans.", to: ["o2"] },
-      { id: "a2", t: "Build digital data collection", d: "Mobile survey tools in KoboToolbox, ODK and CommCare, with validation built in so errors are caught in the field.", to: ["o3", "o4"] },
-      { id: "a3", t: "Train & supervise field teams", d: "Enumerator training, supervision and data quality assurance on national exercises and county surveys.", to: ["o3", "o4"] },
-      { id: "a4", t: "Clean & analyse data", d: "Python, SPSS and STATA workflows for cleaning, deduplication and analysis of large survey datasets.", to: ["o1", "o4"] },
-      { id: "a5", t: "Visualise & automate", d: "Power BI dashboards and Make.com automations that remove manual reporting work.", to: ["o1"] }
+    { col: "Activities", stat: "5 core MEL services", items: [
+      { id: "a1", t: "Design results frameworks", d: "Theories of change, logframes (including EU intervention logic), indicator reference sheets and MEL plans.", to: ["o2"],
+        ind: "Results frameworks and MEL plans designed", mov: "Approved logframes; indicator reference sheets", ex: "Ajira Digital · SEMA II · Golden ABC", as: "Stakeholders agree on outcomes and targets" },
+      { id: "a2", t: "Build digital data collection", d: "Mobile survey tools in KoboToolbox, ODK and CommCare, with validation built in so errors are caught in the field.", to: ["o3", "o4"],
+        ind: "Digital tools deployed with built-in validation", mov: "XLSForms; submission logs", ex: "SEMA II farmer survey (659 farmers)", as: "Enumerators follow protocols and sync data daily" },
+      { id: "a3", t: "Train & supervise field teams", d: "Enumerator training, supervision and data quality assurance on national exercises and county surveys.", to: ["o3", "o4"],
+        ind: "Field staff trained and supervised: 380+", mov: "Training registers; supervision reports", ex: "KNBS Census · NIIMS · SEMA II", as: "Trained staff are retained through the exercise" },
+      { id: "a4", t: "Clean & analyse data", d: "Python, SPSS and STATA workflows for cleaning, deduplication and analysis of large survey datasets.", to: ["o1", "o4"],
+        ind: "Datasets cleaned, validated and analysed", mov: "Cleaning logs; analysis scripts", ex: "SEMA II: 659 × 226 dataset", as: "Raw data is complete enough to analyse" },
+      { id: "a5", t: "Visualise & automate", d: "Power BI dashboards and Make.com automations that remove manual reporting work.", to: ["o1"],
+        ind: "Dashboards and automated workflows delivered", mov: "Published dashboards; workflow logs", ex: "Ajira Digital dashboards · TrendHub", as: "Data sources are updated on schedule" }
     ]},
-    { col: "Outputs", items: [
-      { id: "o1", t: "Decision dashboards", d: "Power BI dashboards for programme teams and donors, including the SEMA II horticulture dashboard and Ajira Digital reporting.", to: ["c1"] },
-      { id: "o2", t: "Compliant donor reports", d: "Every Ajira Digital report submitted on time and to standard (100% compliance).", to: ["c2"] },
-      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEL systems; 380+ enumerators and data-capture staff trained on national exercises.", to: ["c2", "c3"] },
-      { id: "o4", t: "Clean, trusted datasets", d: "For example the 659-farmer, 226-variable SEMA II master dataset.", to: ["c1", "c3"] }
+    { col: "Outputs", stat: "380+ trained · 659 farmers surveyed", items: [
+      { id: "o1", t: "Decision dashboards", d: "Power BI dashboards for programme teams and donors, including the SEMA II horticulture dashboard and Ajira Digital reporting.", to: ["c1"],
+        ind: "Dashboards in active use by programme teams", mov: "Dashboard access logs; management meeting notes", ex: "SEMA II (4-page dashboard) · Ajira Digital", as: "Managers make time to review the data" },
+      { id: "o2", t: "Compliant donor reports", d: "Every Ajira Digital report submitted on time and to standard (100% compliance).", to: ["c2"],
+        ind: "% of donor reports submitted on time and to standard: 100%", mov: "Donor submission records", ex: "Ajira Digital (Mastercard Foundation)", as: "Donor reporting requirements stay stable" },
+      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEL systems; 380+ enumerators and data-capture staff trained on national exercises.", to: ["c2", "c3"],
+        ind: "Staff and partners trained on MEL systems: 30+", mov: "Training registers; post-training assessments", ex: "Ajira Digital regional teams", as: "Trained staff apply the skills in their roles" },
+      { id: "o4", t: "Clean, trusted datasets", d: "For example the 659-farmer, 226-variable SEMA II master dataset.", to: ["c1", "c3"],
+        ind: "Analysis-ready datasets with documented cleaning", mov: "Data dictionaries; DQA reports", ex: "SEMA II master dataset", as: "Data is stored securely and shared appropriately" }
     ]},
-    { col: "Outcomes", items: [
-      { id: "c1", t: "40% faster reporting", d: "Dashboards cut reporting turnaround time by 40% on the Ajira Digital Programme.", to: ["m1"] },
-      { id: "c2", t: "+25% data accuracy", d: "Results frameworks and data quality assurance raised data accuracy by 25%.", to: ["m1"] },
-      { id: "c3", t: "Evidence-led decisions", d: "Programme managers adjust activities based on what the data shows, not guesswork.", to: ["m1"] }
+    { col: "Outcomes", stat: "40% faster · +25% accuracy", items: [
+      { id: "c1", t: "40% faster reporting", d: "Dashboards cut reporting turnaround time by 40% on the Ajira Digital Programme.", to: ["m1"],
+        ind: "Reporting turnaround time: down 40%", mov: "Reporting calendars, before vs after", ex: "Ajira Digital", as: "Time saved is reinvested in analysis and learning" },
+      { id: "c2", t: "+25% data accuracy", d: "Results frameworks and data quality assurance raised data accuracy by 25%.", to: ["m1"],
+        ind: "Data accuracy: up 25%", mov: "Routine DQA results", ex: "Ajira Digital", as: "DQAs continue after the initial fixes" },
+      { id: "c3", t: "Evidence-led decisions", d: "Programme managers adjust activities based on what the data shows, not guesswork.", to: ["m1"],
+        ind: "Programme adjustments informed by MEL evidence", mov: "Learning-review notes; management decisions log", ex: "SEMA II learning sessions", as: "Leadership is open to adapting plans" }
     ]},
-    { col: "Impact", items: [
-      { id: "m1", t: "Programmes that improve lives", d: "Youth in digital work, smallholder farmers with better yields, and communities protecting their forests, all supported by evidence.", to: [] }
+    { col: "Impact", stat: "8 funders served", items: [
+      { id: "m1", t: "Programmes that improve lives", d: "Youth in digital work, smallholder farmers with better yields, and communities protecting their forests, all supported by evidence.", to: [],
+        ind: "Long-term change in livelihoods, employment and resilience", mov: "Endline evaluations; programme impact reports", ex: "Youth employment · agriculture · environment", as: "Wider economic and policy conditions remain supportive" }
     ]}
   ],
+  // The "Walk me through it" button plays this path, one box per column
+  tocWalk: ["i3", "a5", "o1", "c1", "m1"],
+
+  // Assumptions & risks strip under the Theory of Change
+  tocAssumptions: {
+    title: "Key assumptions & risks: example from a youth employment programme",
+    items: [
+      { link: "Inputs → Activities", a: "Youth can reach the training: affordable internet, devices and transport to centres.", monitor: "Attendance and dropout rates, with reasons for dropping out", risk: "Cost of data and transport; response: data bundles, local training hubs" },
+      { link: "Activities → Outputs", a: "Trainees stay and complete the course instead of leaving for casual work.", monitor: "Completion rate by cohort, gender and location", risk: "Women drop out more due to care duties; response: flexible, childcare-friendly schedules" },
+      { link: "Outputs → Outcomes", a: "There is demand for digital work, and youth can get paid (payment accounts and IDs in place).", monitor: "Job/gig placement at 3 and 6 months; % with working payment accounts", risk: "Accounts opened but no earnings; response: mentorship to win a first client" },
+      { link: "Outcomes → Impact", a: "Income from digital work is steady enough to support a livelihood, and policy stays supportive.", monitor: "Monthly income; % earning above a set threshold; policy scanning", risk: "Irregular gig income or new restrictions; response: diversify platforms, engage partners on policy" }
+    ]
+  },
+
+  // Method badges shown under the Theory of Change
+  methods: ["OECD-DAC criteria", "Baseline · Midline · Endline", "Data Quality Assessments (DQA)", "Results-Based Management",
+    "Adaptive management & learning", "AAP & PSEA", "Experimental & quasi-experimental designs", "Indicator reference sheets"],
 
   /* ---------- Career timeline (newest first) ---------- */
   timeline: [
@@ -197,7 +232,6 @@ window.PORTFOLIO = {
   ],
 
   services: [
-    
     { t: "MEL consultancy", d: "End-to-end MEL support for donor-funded programmes: MEL plans, baselines and endlines, evaluations, data quality assessments and learning reviews." },
     { t: "Power BI dashboards", d: "Programme and donor dashboards built from your Excel, Kobo or survey data." },
     { t: "Survey data cleaning & analysis", d: "Clean, deduplicated, analysis-ready datasets with a clear report of findings." },
@@ -206,6 +240,5 @@ window.PORTFOLIO = {
     { t: "Business development consultant | SME coach & mentor", d: "Business model canvas, investment-ready business plans, funding proposals and one-to-one coaching for SMEs and agribusinesses." },
     { t: "Reporting automation", d: "Make.com and Python workflows that remove repetitive reporting tasks." },
     { t: "Training & capacity building", d: "Hands-on training for staff, partners, enumerators and entrepreneurs." }
-  
   ]
 };
