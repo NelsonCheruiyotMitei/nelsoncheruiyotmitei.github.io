@@ -241,7 +241,15 @@ select:focus,input:focus,textarea:focus{outline:2px solid var(--accent);outline-
 .cert{display:flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--line);padding:.55rem .9rem;border-radius:10px;font-size:.88rem;transition:transform .2s,border-color .2s}
 .cert:hover{transform:translateY(-2px);border-color:var(--accent2)}
 .cert::before{content:"✓";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:color-mix(in srgb,var(--accent2) 25%,transparent);color:var(--accent2);font-size:.7rem;font-weight:700}
-.edu{margin-top:1.4rem;color:var(--muted)}
+.edu{margin-top:3rem}
+.edu h3{margin-bottom:1rem}
+.edu-list{list-style:none;display:grid;gap:.7rem;max-width:860px}
+.edu-list li{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:.9rem 1.2rem;transition:transform .2s,border-color .2s}
+.edu-list li:hover{transform:translateX(4px);border-color:var(--accent)}
+.edu-icon{font-size:1.5rem}
+.edu-list b{display:block;font-family:var(--display);font-size:1.05rem}
+.edu-list span:not(.edu-icon){font-size:.9rem;color:var(--muted)}
+.edu + .certs{margin-top:2rem}
 
 /* ============ Services / contact ============ */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:3.5rem}
