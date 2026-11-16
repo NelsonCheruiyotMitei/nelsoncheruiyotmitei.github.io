@@ -1,4 +1,4 @@
-# Nelson Mitei · MEAL Genius portfolio
+# Nelson Mitei · MEL Genius portfolio
 
 An interactive portfolio website built with plain HTML, CSS and JavaScript. It has no build step, so GitHub Pages can host it for free exactly as it is.
 
@@ -49,7 +49,7 @@ Copy any block inside `projects: [ ... ]` in `data.js`, paste it below, change t
 
 ## Custom domain (optional)
 
-Buy a domain (e.g. `mealgenius.co.ke`), then in **Settings → Pages → Custom domain** enter it and follow GitHub's DNS instructions.
+Buy a domain (e.g. `MELgenius.co.ke`), then in **Settings → Pages → Custom domain** enter it and follow GitHub's DNS instructions.
 
 ## Note on the demo dashboard
 

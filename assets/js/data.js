@@ -8,13 +8,13 @@ window.PORTFOLIO = {
   person: {
     name: "Nelson Cheruiyot Mitei",
     shortName: "Nelson Mitei",
-    brand: "MEAL Genius",
+    brand: "MEL Genius",
     title: "Monitoring, Evaluation, Research & Learning (MERL) Specialist",
     tagline: "Turning programme data into decisions.",
-    roles: ["MEAL Specialist", "Power BI Developer", "Data Systems Builder", "Results Framework Designer", "Automation Builder"],
+    roles: ["MEL Specialist", "Power BI Developer", "Data Systems Builder", "Results Framework Designer", "Automation Builder"],
     location: "Nairobi, Kenya",
     summary:
-      "I design results frameworks, build digital data systems and turn messy field data into dashboards that donors and programme teams actually use. Over 6+ years I have delivered MEAL on programmes funded by the Mastercard Foundation, USAID, FCDO, the EU, the World Bank, the UN, the ILO and the Government of Kenya.",
+      "I design results frameworks, build digital data systems and turn messy field data into dashboards that donors and programme teams actually use. Over 6+ years I have delivered MEL on programmes funded by the Mastercard Foundation, USAID, FCDO, the EU, the World Bank, the UN, the ILO and the Government of Kenya.",
     photo: "", // e.g. "assets/img/nelson.jpg"; leave empty to show initials
     cv: "assets/Nelson-Mitei-CV.pdf", // add your CV PDF with this exact name
     email: "mcmitey@gmail.com",
@@ -31,7 +31,7 @@ window.PORTFOLIO = {
   },
 
   kpis: [
-    { value: 6, suffix: "+", label: "Years in MEAL & data" },
+    { value: 6, suffix: "+", label: "Years in MEL & data" },
     { value: 8, suffix: "", label: "Funders & donors served" },
     { value: 380, suffix: "+", label: "Field staff & enumerators trained" },
     { value: 659, suffix: "", label: "Farmers in one survey I led" },
@@ -49,7 +49,7 @@ window.PORTFOLIO = {
       { id: "i3", t: "Data toolkit", d: "Power BI (Power Query, DAX), advanced Excel, Python, KoboToolbox, ODK, CommCare, SPSS, STATA, GIS and Make.com.", to: ["a2", "a4", "a5"] }
     ]},
     { col: "Activities", items: [
-      { id: "a1", t: "Design results frameworks", d: "Theories of change, logframes (including EU intervention logic), indicator reference sheets and MEAL plans.", to: ["o2"] },
+      { id: "a1", t: "Design results frameworks", d: "Theories of change, logframes (including EU intervention logic), indicator reference sheets and MEL plans.", to: ["o2"] },
       { id: "a2", t: "Build digital data collection", d: "Mobile survey tools in KoboToolbox, ODK and CommCare, with validation built in so errors are caught in the field.", to: ["o3", "o4"] },
       { id: "a3", t: "Train & supervise field teams", d: "Enumerator training, supervision and data quality assurance on national exercises and county surveys.", to: ["o3", "o4"] },
       { id: "a4", t: "Clean & analyse data", d: "Python, SPSS and STATA workflows for cleaning, deduplication and analysis of large survey datasets.", to: ["o1", "o4"] },
@@ -58,7 +58,7 @@ window.PORTFOLIO = {
     { col: "Outputs", items: [
       { id: "o1", t: "Decision dashboards", d: "Power BI dashboards for programme teams and donors, including the SEMA II horticulture dashboard and Ajira Digital reporting.", to: ["c1"] },
       { id: "o2", t: "Compliant donor reports", d: "Every Ajira Digital report submitted on time and to standard (100% compliance).", to: ["c2"] },
-      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEAL systems; 380+ enumerators and data-capture staff trained on national exercises.", to: ["c2", "c3"] },
+      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEL systems; 380+ enumerators and data-capture staff trained on national exercises.", to: ["c2", "c3"] },
       { id: "o4", t: "Clean, trusted datasets", d: "For example the 659-farmer, 226-variable SEMA II master dataset.", to: ["c1", "c3"] }
     ]},
     { col: "Outcomes", items: [
@@ -73,10 +73,10 @@ window.PORTFOLIO = {
 
   /* ---------- Career timeline (newest first) ---------- */
   timeline: [
-    { when: "Jun – Jul 2026", role: "MEAL Consultant", org: "Institute of Applied Studies & Research (IASR) · SEMA II Project, KALRO partnership", where: "Makueni County",
-      points: ["Led end-to-end design and implementation of the project's MEAL framework", "Designed digital tools, sampling and survey protocols; coordinated data collection for 659 smallholder farmers", "Cleaned, validated and analysed the data; built interactive Power BI dashboards", "Prepared technical reports and presentations, and facilitated learning and reflection sessions"] },
-    { when: "Apr 2020 – Mar 2026", role: "Regional MEAL Lead", org: "eMobilis Technology Training Institute · Ajira Digital Programme (Mastercard Foundation)", where: "Rift Valley region",
-      points: ["Improved data accuracy by 25% and achieved 100% donor reporting compliance through results frameworks, digital tools and DQA", "Built Power BI dashboards that cut reporting turnaround time by 40%", "Ran routine data quality assessments, verification visits and performance reviews", "Trained 30+ staff, partners and stakeholders on MEAL systems and evidence use"] },
+    { when: "Jun – Jul 2026", role: "MEL Consultant", org: "Institute of Applied Studies & Research (IASR) · SEMA II Project, KALRO partnership", where: "Makueni County",
+      points: ["Led end-to-end design and implementation of the project's MEL framework", "Designed digital tools, sampling and survey protocols; coordinated data collection for 659 smallholder farmers", "Cleaned, validated and analysed the data; built interactive Power BI dashboards", "Prepared technical reports and presentations, and facilitated learning and reflection sessions"] },
+    { when: "Apr 2020 – Mar 2026", role: "Regional MEL Lead", org: "eMobilis Technology Training Institute · Ajira Digital Programme (Mastercard Foundation)", where: "Rift Valley region",
+      points: ["Improved data accuracy by 25% and achieved 100% donor reporting compliance through results frameworks, digital tools and DQA", "Built Power BI dashboards that cut reporting turnaround time by 40%", "Ran routine data quality assessments, verification visits and performance reviews", "Trained 30+ staff, partners and stakeholders on MEL systems and evidence use"] },
     { when: "Aug – Sep 2019", role: "ICT Supervisor", org: "Kenya National Bureau of Statistics (KNBS) · 2019 Population & Housing Census", where: "Kericho County",
       points: ["Led a team of 50 ICT specialists supporting census field operations", "Trained 150 enumerators on ICT tools, data collection protocols and field procedures", "Achieved 95% data accuracy through equipment audits and quality checks", "Digital collection processes cut collection time by 30%"] },
     { when: "Mar – Jul 2019", role: "ICT Project Coordinator", org: "National Integrated Identity Management System (NIIMS) · Ministry of Interior", where: "Bureti Sub-county",
@@ -90,13 +90,13 @@ window.PORTFOLIO = {
   // chart: optional mini chart shown in the case-study window (illustrative).
   projects: [
     {
-      id: "ajira", title: "Ajira Digital Programme: regional MEAL system", org: "eMobilis · Mastercard Foundation", year: "2020–2026",
-      sector: "Youth employment", tools: ["Power BI", "KoboToolbox", "Excel", "MEAL frameworks"],
-      summary: "Six years leading MEAL for a flagship youth digital-jobs programme across the South Rift.",
+      id: "ajira", title: "Ajira Digital Programme: regional MEL system", org: "eMobilis · Mastercard Foundation", year: "2020–2026",
+      sector: "Youth employment", tools: ["Power BI", "KoboToolbox", "Excel", "MEL frameworks"],
+      summary: "Six years leading MEL for a flagship youth digital-jobs programme across the South Rift.",
       problem: "Regional data arrived late, in different formats, with errors that took days to fix before every donor report.",
       built: "A results framework with clear indicators, digital data collection tools, a data quality assurance routine, and Power BI dashboards for regional and donor reporting.",
       result: "Data accuracy up 25%, reporting turnaround down 40%, 100% donor reporting compliance, and 30+ staff and partners trained.",
-      chart: { type: "bar", label: "Change after MEAL system (%)", labels: ["Data accuracy", "Reporting speed", "Donor compliance"], data: [25, 40, 100] }
+      chart: { type: "bar", label: "Change after MEL system (%)", labels: ["Data accuracy", "Reporting speed", "Donor compliance"], data: [25, 40, 100] }
     },
     {
       id: "sema", title: "SEMA II horticulture dashboard", org: "IASR · KALRO", year: "2026",
@@ -127,8 +127,8 @@ window.PORTFOLIO = {
     },
     {
       id: "chepalungu", title: "Chepalungu Forest: community fodder & conservation design", org: "The Golden Abosi Kapsosurwo CBO", year: "2026",
-      sector: "Environment", tools: ["MEAL frameworks", "Theory of Change"],
-      summary: "Project design and MEAL framework to reduce grazing pressure on Chepalungu Forest, Bomet County.",
+      sector: "Environment", tools: ["MEL frameworks", "Theory of Change"],
+      summary: "Project design and MEL framework to reduce grazing pressure on Chepalungu Forest, Bomet County.",
       problem: "Livestock grazing is degrading an important but unprotected forest, and farmers lack fodder in dry seasons.",
       built: "A theory of change, results framework and proposal combining fodder demonstration plots, lead-farmer learning, conservation education and dialogue with forest authorities.",
       result: "Proposals prepared for conservation funders on behalf of the CBO, which I co-founded.",
@@ -136,7 +136,7 @@ window.PORTFOLIO = {
     },
     {
       id: "poultry", title: "Golden ABC poultry project: theory of change", org: "Golden ABC, Litein", year: "2026",
-      sector: "Agriculture", tools: ["MEAL frameworks", "Theory of Change"],
+      sector: "Agriculture", tools: ["MEL frameworks", "Theory of Change"],
       summary: "Theory of change and results framework in EU intervention-logic format for a village poultry enterprise.",
       problem: "The project needed a clear results chain and indicators that funders would recognise.",
       built: "An EU-style intervention logic with outcomes, outputs, indicators, means of verification and assumptions.",
@@ -156,7 +156,7 @@ window.PORTFOLIO = {
 
   /* ---------- Skills (self-rated 0–100; adjust as you like) ---------- */
   skills: [
-    { name: "MEAL frameworks", level: 95 },
+    { name: "MEL frameworks", level: 95 },
     { name: "Power BI", level: 92 },
     { name: "KoboToolbox", level: 90 },
     { name: "Excel", level: 90 },
@@ -168,9 +168,9 @@ window.PORTFOLIO = {
 
   /* ---------- Places on the map ---------- */
   places: [
-    { name: "Nairobi", lat: -1.2864, lng: 36.8172, note: "Home base · MEAL Genius consulting" },
+    { name: "Nairobi", lat: -1.2864, lng: 36.8172, note: "Home base · MEL Genius consulting" },
     { name: "Makueni County", lat: -1.8036, lng: 37.6203, note: "SEMA II horticulture survey & dashboard (2026)" },
-    { name: "South Rift region", lat: -0.3031, lng: 36.0800, note: "Ajira Digital Programme, Regional MEAL Lead (2020–2026)" },
+    { name: "South Rift region", lat: -0.3031, lng: 36.0800, note: "Ajira Digital Programme, Regional MEL Lead (2020–2026)" },
     { name: "Bureti, Kericho County", lat: -0.5850, lng: 35.1900, note: "NIIMS registration coordination (2019)" },
     { name: "Chepalungu Forest, Bomet", lat: -0.9300, lng: 35.2300, note: "Community conservation project design (2026)" },
     { name: "Kapsosurwo, Sotik", lat: -0.6800, lng: 35.1200, note: "The Golden Abosi Kapsosurwo CBO (co-founder)" }
@@ -198,7 +198,7 @@ window.PORTFOLIO = {
     { t: "Power BI dashboards", d: "Programme and donor dashboards built from your Excel, Kobo or survey data." },
     { t: "Survey data cleaning & analysis", d: "Clean, deduplicated, analysis-ready datasets with a clear report of findings." },
     { t: "Digital data collection", d: "KoboToolbox, ODK and CommCare forms with built-in validation and skip logic." },
-    { t: "MEAL systems & frameworks", d: "Theories of change, logframes, indicator sheets and MEAL plans that donors recognise." },
+    { t: "MEL systems & frameworks", d: "Theories of change, logframes, indicator sheets and MEL plans that donors recognise." },
     { t: "Reporting automation", d: "Make.com and Python workflows that remove repetitive reporting tasks." },
     { t: "Training & capacity building", d: "Hands-on training for staff, partners and enumerators." }
   ]
