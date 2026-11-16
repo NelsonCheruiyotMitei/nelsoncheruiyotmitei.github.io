@@ -38,6 +38,8 @@
   $("#heroName").textContent = P.person.name;
   $("#heroSummary").textContent = P.person.summary;
   $("#loc").textContent = P.person.location;
+  if (P.person.availability) $("#avail").textContent = P.person.availability;
+  if (P.donorsLabel) $("#donorsLabel").textContent = P.donorsLabel;
   $("#cvBtn").href = P.person.cv;
   $("#year").textContent = new Date().getFullYear();
 

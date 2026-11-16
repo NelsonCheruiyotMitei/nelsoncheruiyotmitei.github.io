@@ -9,12 +9,13 @@ window.PORTFOLIO = {
     name: "Nelson Cheruiyot Mitei",
     shortName: "Nelson Mitei",
     brand: "MEL Genius",
-    title: "Monitoring, Evaluation, Research & Learning (MERL) Specialist",
+    title: "Monitoring, Evaluation and Learning (MEL) Specialist | Data Analytics and Power BI | Digital Data Collection",
     tagline: "Turning programme data into decisions.",
-    roles: ["MEL Specialist", "Power BI Developer", "Data Systems Builder", "Results Framework Designer", "Automation Builder"],
+    roles: ["MEL Specialist", "Power BI Developer", "Systems-informed MEL Practitioner", "Results Framework Designer", "Digital Data Collection Expert"],
     location: "Nairobi, Kenya",
     summary:
-      "I design results frameworks, build digital data systems and turn messy field data into dashboards that donors and programme teams actually use. Over 6+ years I have delivered MEL on programmes funded by the Mastercard Foundation, USAID, FCDO, the EU, the World Bank, the UN, the ILO and the Government of Kenya.",
+      "I design and strengthen MEL systems for donor-funded youth employment, digital skills and agriculture programmes in Kenya. Over 6+ years I have built results frameworks, digital data collection systems and Power BI dashboards that turn field data into clear evidence for programme managers and donors, including as Regional MEL Lead on the Mastercard Foundation-funded Ajira Digital Programme.",
+    availability: "Available for remote and home-based roles (EAT, UTC+3)",
     photo: "", // e.g. "assets/img/nelson.jpg"; leave empty to show initials
     cv: "assets/Nelson-Mitei-CV.pdf", // add your CV PDF with this exact name
     email: "mcmitey@gmail.com",
@@ -32,14 +33,16 @@ window.PORTFOLIO = {
 
   kpis: [
     { value: 6, suffix: "+", label: "Years in MEL & data" },
-    { value: 8, suffix: "", label: "Funders & donors served" },
-    { value: 380, suffix: "+", label: "Field staff & enumerators trained" },
     { value: 659, suffix: "", label: "Farmers in one survey I led" },
+    { value: 25, suffix: "%", label: "Better data accuracy" },
     { value: 40, suffix: "%", label: "Faster reporting with Power BI" },
-    { value: 100, suffix: "%", label: "Donor reporting compliance" }
+    { value: 100, suffix: "%", label: "Donor reporting compliance" },
+    { value: 30, suffix: "+", label: "Staff & partners trained" }
   ],
 
-  donors: ["Mastercard Foundation", "USAID", "FCDO", "European Union", "World Bank", "United Nations", "ILO", "Government of Kenya"],
+  // Organisations and programmes I have worked with (scrolling strip under the hero)
+  donorsLabel: "Programmes and partners I have worked with",
+  donors: ["Mastercard Foundation", "Ajira Digital Programme", "eMobilis", "KALRO", "IASR", "Kenya National Bureau of Statistics", "ICT Authority", "Government of Kenya"],
 
   /* ---------- Theory of Change: my career as a results chain ---------- */
   // Each box: t = title, d = story, then a mini logframe:
@@ -47,7 +50,7 @@ window.PORTFOLIO = {
   toc: [
     { col: "Inputs", stat: "6+ yrs · MSc M&E", items: [
       { id: "i1", t: "ICT foundation", d: "Three national ICT roles (2018–2019): ICT Authority Digital Literacy Programme, NIIMS registration and the KNBS 2019 Census. This is where I learnt to run large field data operations.", to: ["a2", "a3"],
-        ind: "People trained on national exercises: 440+ (150 enumerators, 230+ data-capture staff, 60 teachers)", mov: "Employment records; training registers", ex: "KNBS 2019 Census · NIIMS", as: "Field teams have working devices and connectivity" },
+        ind: "National field exercises supported: 3 (KNBS Census, NIIMS, Digital Literacy Programme)", mov: "Employment records; training registers", ex: "KNBS 2019 Census · NIIMS", as: "Field teams have working devices and connectivity" },
       { id: "i2", t: "MSc Monitoring & Evaluation", d: "MSc Monitoring & Evaluation (JKUAT) and BSc Business Information Management (Kisii University), plus certifications in RBM, Theory of Change and Results Frameworks.", to: ["a1"],
         ind: "Formal MEL qualifications and certifications held", mov: "Degree and certificates", ex: "JKUAT · Kisii University", as: "Methods are adapted to each programme's context" },
       { id: "i3", t: "Data toolkit", d: "Power BI (Power Query, DAX), advanced Excel, Python, KoboToolbox, ODK, CommCare, SPSS, STATA, GIS and Make.com.", to: ["a2", "a4", "a5"],
@@ -59,18 +62,18 @@ window.PORTFOLIO = {
       { id: "a2", t: "Build digital data collection", d: "Mobile survey tools in KoboToolbox, ODK and CommCare, with validation built in so errors are caught in the field.", to: ["o3", "o4"],
         ind: "Digital tools deployed with built-in validation", mov: "XLSForms; submission logs", ex: "SEMA II farmer survey (659 farmers)", as: "Enumerators follow protocols and sync data daily" },
       { id: "a3", t: "Train & supervise field teams", d: "Enumerator training, supervision and data quality assurance on national exercises and county surveys.", to: ["o3", "o4"],
-        ind: "Field staff trained and supervised: 380+", mov: "Training registers; supervision reports", ex: "KNBS Census · NIIMS · SEMA II", as: "Trained staff are retained through the exercise" },
+        ind: "Enumerators and field teams trained and supervised", mov: "Training registers; supervision reports", ex: "KNBS Census · NIIMS · SEMA II", as: "Trained staff are retained through the exercise" },
       { id: "a4", t: "Clean & analyse data", d: "Python, SPSS and STATA workflows for cleaning, deduplication and analysis of large survey datasets.", to: ["o1", "o4"],
         ind: "Datasets cleaned, validated and analysed", mov: "Cleaning logs; analysis scripts", ex: "SEMA II: 659 × 226 dataset", as: "Raw data is complete enough to analyse" },
       { id: "a5", t: "Visualise & automate", d: "Power BI dashboards and Make.com automations that remove manual reporting work.", to: ["o1"],
         ind: "Dashboards and automated workflows delivered", mov: "Published dashboards; workflow logs", ex: "Ajira Digital dashboards · TrendHub", as: "Data sources are updated on schedule" }
     ]},
-    { col: "Outputs", stat: "380+ trained · 659 farmers surveyed", items: [
+    { col: "Outputs", stat: "30+ trained · 659 farmers surveyed", items: [
       { id: "o1", t: "Decision dashboards", d: "Power BI dashboards for programme teams and donors, including the SEMA II horticulture dashboard and Ajira Digital reporting.", to: ["c1"],
         ind: "Dashboards in active use by programme teams", mov: "Dashboard access logs; management meeting notes", ex: "SEMA II (4-page dashboard) · Ajira Digital", as: "Managers make time to review the data" },
       { id: "o2", t: "Compliant donor reports", d: "Every Ajira Digital report submitted on time and to standard (100% compliance).", to: ["c2"],
         ind: "% of donor reports submitted on time and to standard: 100%", mov: "Donor submission records", ex: "Ajira Digital (Mastercard Foundation)", as: "Donor reporting requirements stay stable" },
-      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEL systems; 380+ enumerators and data-capture staff trained on national exercises.", to: ["c2", "c3"],
+      { id: "o3", t: "Skilled teams", d: "30+ staff and partners trained on MEL systems, plus census and registration enumerators trained on digital data collection.", to: ["c2", "c3"],
         ind: "Staff and partners trained on MEL systems: 30+", mov: "Training registers; post-training assessments", ex: "Ajira Digital regional teams", as: "Trained staff apply the skills in their roles" },
       { id: "o4", t: "Clean, trusted datasets", d: "For example the 659-farmer, 226-variable SEMA II master dataset.", to: ["c1", "c3"],
         ind: "Analysis-ready datasets with documented cleaning", mov: "Data dictionaries; DQA reports", ex: "SEMA II master dataset", as: "Data is stored securely and shared appropriately" }
@@ -83,7 +86,7 @@ window.PORTFOLIO = {
       { id: "c3", t: "Evidence-led decisions", d: "Programme managers adjust activities based on what the data shows, not guesswork.", to: ["m1"],
         ind: "Programme adjustments informed by MEL evidence", mov: "Learning-review notes; management decisions log", ex: "SEMA II learning sessions", as: "Leadership is open to adapting plans" }
     ]},
-    { col: "Impact", stat: "8 funders served", items: [
+    { col: "Impact", stat: "Youth · digital skills · agriculture", items: [
       { id: "m1", t: "Programmes that improve lives", d: "Youth in digital work, smallholder farmers with better yields, and communities protecting their forests, all supported by evidence.", to: [],
         ind: "Long-term change in livelihoods, employment and resilience", mov: "Endline evaluations; programme impact reports", ex: "Youth employment · agriculture · environment", as: "Wider economic and policy conditions remain supportive" }
     ]}
@@ -103,21 +106,30 @@ window.PORTFOLIO = {
   },
 
   // Method badges shown under the Theory of Change
-  methods: ["OECD-DAC criteria", "Baseline · Midline · Endline", "Data Quality Assessments (DQA)", "Results-Based Management",
-    "Adaptive management & learning", "AAP & PSEA", "Experimental & quasi-experimental designs", "Indicator reference sheets"],
+  methods: ["Systems-informed MEL", "Market Systems Development (MSD)", "OECD-DAC criteria", "Baseline · Midline · Endline",
+    "Mixed methods (KIIs, FGDs)", "Outcome harvesting", "Contribution analysis", "Data Quality Assessments (DQA)",
+    "Results-Based Management", "Indicator reference sheets (PIRS)", "Adaptive management & learning"],
 
   /* ---------- Career timeline (newest first) ---------- */
   timeline: [
-    { when: "Jun – Jul 2026", role: "MEL Consultant", org: "Institute of Applied Studies & Research (IASR) · SEMA II Project, KALRO partnership", where: "Makueni County",
-      points: ["Led end-to-end design and implementation of the project's MEL framework", "Designed digital tools, sampling and survey protocols; coordinated data collection for 659 smallholder farmers", "Cleaned, validated and analysed the data; built interactive Power BI dashboards", "Prepared technical reports and presentations, and facilitated learning and reflection sessions"] },
-    { when: "Apr 2020 – Mar 2026", role: "Regional MEL Lead", org: "eMobilis Technology Training Institute · Ajira Digital Programme (Mastercard Foundation)", where: "Rift Valley region",
-      points: ["Improved data accuracy by 25% and achieved 100% donor reporting compliance through results frameworks, digital tools and DQA", "Built Power BI dashboards that cut reporting turnaround time by 40%", "Ran routine data quality assessments, verification visits and performance reviews", "Trained 30+ staff, partners and stakeholders on MEL systems and evidence use"] },
-    { when: "Aug – Sep 2019", role: "ICT Supervisor", org: "Kenya National Bureau of Statistics (KNBS) · 2019 Population & Housing Census", where: "Kericho County",
-      points: ["Led a team of 50 ICT specialists supporting census field operations", "Trained 150 enumerators on ICT tools, data collection protocols and field procedures", "Achieved 95% data accuracy through equipment audits and quality checks", "Digital collection processes cut collection time by 30%"] },
-    { when: "Mar – Jul 2019", role: "ICT Project Coordinator", org: "National Integrated Identity Management System (NIIMS) · Ministry of Interior", where: "Bureti Sub-county",
-      points: ["Trained 230+ data-capture staff on registration procedures and data quality standards", "Cut data discrepancies by 20% through validation and quality control", "Resolved operational challenges 80% faster through stronger field reporting", "90% positive stakeholder feedback"] },
-    { when: "Mar 2018 – Mar 2019", role: "ICT Officer", org: "ICT Authority · Digital Literacy Programme", where: "Bomet County",
-      points: ["Trained 60 teachers in Google Workspace and digital tools", "Assessed 70+ educational materials for digital suitability and accessibility"] }
+    { when: "Jun – Jul 2026", role: "MEL Consultant", org: "Institute of Applied Studies and Research (IASR) · SEMA II Project, in partnership with KALRO", where: "Makueni County",
+      points: ["Led the design and implementation of the project's MEL framework using a systems-thinking and Market Systems Development (MSD) lens, tracking farmers' interactions with value-chain actors and support services alongside farm-level outcomes",
+        "Designed KoboToolbox tools, sampling and survey protocols; coordinated data collection for 659 smallholder farmers and trained field teams",
+        "Cleaned and validated the master dataset (659 records, 226 variables) with Excel, Power Query and Python (pandas); built an interactive Power BI dashboard",
+        "Produced a technical report and 14-slide presentation with recommendations for programme management",
+        "Worked with project staff, KALRO researchers, extension officers and communities to strengthen data collection and evidence use"] },
+    { when: "Apr 2020 – Mar 2026", role: "Regional MEL Lead", org: "eMobilis Technology Training Institute · Ajira Digital Programme (funded by Mastercard Foundation)", where: "South Rift Region",
+      points: ["Led the MEAL system across multiple sites, applying systems thinking to map how youth, training providers, employers and online work platforms interact",
+        "Applied MSD principles to track uptake and practice change among partners and market actors, informing adaptive management and scale-up",
+        "Improved data accuracy by 25% and achieved 100% donor reporting compliance through results frameworks, digital tools, DQAs and verification visits",
+        "Built Power BI dashboards that cut reporting turnaround time by 40%",
+        "Facilitated pause-and-learn sessions, outcome harvesting and contribution analysis; trained 30+ staff, partners and stakeholders"] },
+    { when: "Aug – Sep 2019", role: "Enumerator Coordinator and Trainer", org: "Kenya National Bureau of Statistics (KNBS) · 2019 Kenya Population and Housing Census", where: "Kenya",
+      points: ["Trained and coordinated census enumerators on digital data collection procedures, supporting field teams to meet data quality and coverage standards"] },
+    { when: "Mar – Jul 2019", role: "Project Coordinator", org: "National Integrated Identity Management System (NIIMS) · digital biometric registration", where: "Bureti Sub-county, Kericho County",
+      points: ["Trained and supervised enumerators on digital biometric registration, coordinating field teams and monitoring registration progress and data quality"] },
+    { when: "Mar 2018 – Mar 2019", role: "ICT Officer", org: "ICT Authority · Digital Literacy Programme (with Kenya News Agency ICT support)", where: "Kenya",
+      points: ["Provided ICT support for the national Digital Literacy Programme, maintaining devices and systems and supporting users"] }
   ],
 
   /* ---------- Projects / case studies ---------- */
@@ -127,38 +139,38 @@ window.PORTFOLIO = {
     {
       id: "ajira", title: "Ajira Digital Programme: regional MEL system", org: "eMobilis · Mastercard Foundation", year: "2020–2026",
       sector: "Youth employment", tools: ["Power BI", "KoboToolbox", "Excel", "MEL frameworks"],
-      summary: "Six years leading MEL for a flagship youth digital-jobs programme across the South Rift.",
-      problem: "Regional data arrived late, in different formats, with errors that took days to fix before every donor report.",
-      built: "A results framework with clear indicators, digital data collection tools, a data quality assurance routine, and Power BI dashboards for regional and donor reporting.",
+      summary: "Six years leading MEL for a youth digital-jobs programme across the South Rift, with a systems-informed, MSD lens.",
+      problem: "Data from distributed sites arrived late and in different formats, and the programme needed to see change in the wider system (training providers, employers, online platforms), not just outputs.",
+      built: "A results framework and indicators, digital data collection tools, routine DQAs and verification visits, Power BI dashboards, and learning routines (pause-and-learn, outcome harvesting, contribution analysis).",
       result: "Data accuracy up 25%, reporting turnaround down 40%, 100% donor reporting compliance, and 30+ staff and partners trained.",
       chart: { type: "bar", label: "Change after MEL system (%)", labels: ["Data accuracy", "Reporting speed", "Donor compliance"], data: [25, 40, 100] }
     },
     {
-      id: "sema", title: "SEMA II horticulture dashboard", org: "IASR · KALRO", year: "2026",
+      id: "sema", title: "SEMA II horticulture MEL & dashboard", org: "IASR · KALRO", year: "2026",
       sector: "Agriculture", tools: ["Power BI", "Python", "KoboToolbox", "GIS"],
-      summary: "From 659 farmer interviews to a four-page Power BI dashboard for a Makueni County horticulture programme.",
-      problem: "A large survey (659 farmers, 226 variables) with inconsistent entries, mixed data types and a gap in photo evidence.",
-      built: "A Python cleaning workflow, a Power BI dashboard (Overview, Outcomes, Farmer Profiles, Agricultural Practices) with county maps, and a script that uploaded 626 field photos automatically.",
-      result: "Programme staff can explore outcomes by ward, gender and practice in minutes; findings were delivered as a presentation and report.",
-      chart: { type: "doughnut", label: "Dataset processed", labels: ["Farmers surveyed", "Photos uploaded by script"], data: [659, 626] }
+      summary: "A systems-informed MEL framework and Power BI dashboard built from 659 farmer interviews in Makueni County.",
+      problem: "The programme needed to track farmers' links with value-chain actors and extension alongside farm-level outcomes, from a large survey with 226 variables.",
+      built: "A MEL framework with an MSD lens, KoboToolbox tools and sampling, a cleaning workflow in Excel, Power Query and Python, and a Power BI dashboard (overview, outcomes, farmer profiles, practices, geography).",
+      result: "Findings delivered as a technical report and 14-slide presentation, with recommendations for programme management.",
+      chart: { type: "doughnut", label: "Dataset processed", labels: ["Records (farmers)", "Variables"], data: [659, 226] }
     },
     {
-      id: "niims", title: "NIIMS national registration (Huduma Namba)", org: "Ministry of Interior · Government of Kenya", year: "2019",
+      id: "niims", title: "NIIMS national registration (Huduma Namba)", org: "Government of Kenya", year: "2019",
       sector: "Government", tools: ["Field data systems", "Training"],
-      summary: "Coordinated digital population registration in Bureti Sub-county and trained 230+ data-capture staff.",
-      problem: "Residents had to be registered digitally in a short window, using new devices and newly hired staff.",
-      built: "Training for 230+ data-capture staff, a field reporting and issue-resolution routine, and data validation and quality control.",
-      result: "Data discrepancies down 20%, operational issues resolved 80% faster, and 90% positive stakeholder feedback.",
-      chart: { type: "bar", label: "Improvement (%)", labels: ["Fewer data discrepancies", "Faster issue resolution", "Positive feedback"], data: [20, 80, 90] }
+      summary: "Project Coordinator for digital biometric registration in Bureti Sub-county, Kericho County.",
+      problem: "Residents had to be registered digitally in a short window, using new devices and newly hired enumerators.",
+      built: "Enumerator training and supervision, coordination of field teams, and monitoring of registration progress and data quality.",
+      result: "Field teams were trained, coordinated and monitored for progress and data quality throughout the exercise.",
+      chart: null
     },
     {
       id: "census", title: "2019 Kenya Population & Housing Census", org: "Kenya National Bureau of Statistics", year: "2019",
       sector: "Government", tools: ["Field data systems", "Training"],
-      summary: "ICT supervision in Kericho County for Kenya's first digital census: 50 ICT specialists led, 150 enumerators trained.",
-      problem: "Census data captured on tablets needed working devices, secure data handling and fast troubleshooting in the field.",
-      built: "Enumerator training, equipment audits, quality checks and a digital collection process, coordinated across a team of 50 ICT specialists.",
-      result: "95% data accuracy, with collection time cut by 30%.",
-      chart: { type: "bar", label: "Result (%)", labels: ["Data accuracy", "Time saved"], data: [95, 30] }
+      summary: "Enumerator Coordinator and Trainer for Kenya's first digital census.",
+      problem: "Census enumerators needed to collect data digitally to national quality and coverage standards.",
+      built: "Training and coordination of enumerators on digital data collection procedures.",
+      result: "Field teams supported to meet data quality and coverage standards.",
+      chart: null
     },
     {
       id: "chepalungu", title: "Chepalungu Forest: community fodder & conservation design", org: "The Golden Abosi Kapsosurwo CBO", year: "2026",
@@ -206,7 +218,7 @@ window.PORTFOLIO = {
     { name: "Nairobi", lat: -1.2864, lng: 36.8172, note: "Home base · MEL Genius consulting" },
     { name: "Makueni County", lat: -1.8036, lng: 37.6203, note: "SEMA II horticulture survey & dashboard (2026)" },
     { name: "South Rift region", lat: -0.3031, lng: 36.0800, note: "Ajira Digital Programme, Regional MEL Lead (2020–2026)" },
-    { name: "Bureti, Kericho County", lat: -0.5850, lng: 35.1900, note: "NIIMS registration coordination (2019)" },
+    { name: "Bureti, Kericho County", lat: -0.5850, lng: 35.1900, note: "NIIMS digital registration, Project Coordinator (2019)" },
     { name: "Chepalungu Forest, Bomet", lat: -0.9300, lng: 35.2300, note: "Community conservation project design (2026)" },
     { name: "Kapsosurwo, Sotik", lat: -0.6800, lng: 35.1200, note: "The Golden Abosi Kapsosurwo CBO (co-founder)" }
   ],
@@ -225,8 +237,10 @@ window.PORTFOLIO = {
   ],
 
   certifications: [
-    "Power BI", "KoboToolbox", "Results-Based Management", "SPSS", "Theory of Change & Results Frameworks",
-    "Data Visualization", "Advanced Excel", "Core Humanitarian Standard (CHS)", "Fundraising Essentials",
+    "Core Humanitarian Standard (CHS) on Quality and Accountability", "Results-Based Management (RBM), Monitoring and Evaluation",
+    "Theory of Change and Results Framework Development", "Microsoft Power BI Desktop for Business Intelligence",
+    "Data Visualisation and Dashboard Development", "KoboToolbox Data Collection and Management", "SPSS for Data Analysis and Research",
+    "Advanced Microsoft Excel for Data Analysis", "Fundraising Essentials (Business Development and Grants)",
     "Trainer Certification – Women in Digital Business Initiative", "Business Model Canvas for Agribusinesses",
     "Climate Smart Agribusiness: Adaptation", "Creating an Investment-Ready Agribusiness (ABF)"
   ],
