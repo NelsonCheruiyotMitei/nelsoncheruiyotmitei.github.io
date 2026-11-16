@@ -15,7 +15,7 @@ window.PORTFOLIO = {
     location: "Nairobi, Kenya",
     summary:
       "I design and strengthen MEL systems for donor-funded youth employment, digital skills and agriculture programmes in Kenya. Over 6+ years I have built results frameworks, digital data collection systems and Power BI dashboards that turn field data into clear evidence for programme managers and donors, including as Regional MEL Lead on the Mastercard Foundation-funded Ajira Digital Programme.",
-    availability: "Available for remote and home-based roles (EAT, UTC+3)",
+    availability: "Available for remote, home-based and on-site roles (EAT, UTC+3)",
     photo: "", // e.g. "assets/img/nelson.jpg"; leave empty to show initials
     cv: "assets/Nelson-Mitei-CV.pdf", // add your CV PDF with this exact name
     email: "mcmitey@gmail.com",
