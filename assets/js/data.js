@@ -119,7 +119,7 @@ window.PORTFOLIO = {
         "Produced a technical report and 14-slide presentation with recommendations for programme management",
         "Worked with project staff, KALRO researchers, extension officers and communities to strengthen data collection and evidence use"] },
     { when: "Apr 2020 – Mar 2026", role: "Regional MEL Lead", org: "eMobilis Technology Training Institute · Ajira Digital Programme (funded by Mastercard Foundation)", where: "South Rift Region",
-      points: ["Led the MEAL system across multiple sites, applying systems thinking to map how youth, training providers, employers and online work platforms interact",
+      points: ["Led the MEL system across multiple sites, applying systems thinking to map how youth, training providers, employers and online work platforms interact",
         "Applied MSD principles to track uptake and practice change among partners and market actors, informing adaptive management and scale-up",
         "Improved data accuracy by 25% and achieved 100% donor reporting compliance through results frameworks, digital tools, DQAs and verification visits",
         "Built Power BI dashboards that cut reporting turnaround time by 40%",

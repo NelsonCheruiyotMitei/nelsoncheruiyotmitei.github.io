@@ -1,4 +1,4 @@
-/* MEAL Genius portfolio — interactive behaviour. Content lives in data.js */
+/* MEL Consultant portfolio — interactive behaviour. Content lives in data.js */
 (() => {
   const P = window.PORTFOLIO;
   const $ = (s, el = document) => el.querySelector(s);
