@@ -191,15 +191,21 @@ window.PORTFOLIO = {
 
   certifications: [
     "Power BI", "KoboToolbox", "Results-Based Management", "SPSS", "Theory of Change & Results Frameworks",
-    "Data Visualization", "Advanced Excel", "Core Humanitarian Standard (CHS)", "Fundraising Essentials"
+    "Data Visualization", "Advanced Excel", "Core Humanitarian Standard (CHS)", "Fundraising Essentials",
+    "Trainer Certification – Women in Digital Business Initiative", "Business Model Canvas for Agribusinesses",
+    "Climate Smart Agribusiness: Adaptation", "Creating an Investment-Ready Agribusiness (ABF)"
   ],
 
   services: [
+    
+    { t: "MEL consultancy", d: "End-to-end MEL support for donor-funded programmes: MEL plans, baselines and endlines, evaluations, data quality assessments and learning reviews." },
     { t: "Power BI dashboards", d: "Programme and donor dashboards built from your Excel, Kobo or survey data." },
     { t: "Survey data cleaning & analysis", d: "Clean, deduplicated, analysis-ready datasets with a clear report of findings." },
     { t: "Digital data collection", d: "KoboToolbox, ODK and CommCare forms with built-in validation and skip logic." },
     { t: "MEL systems & frameworks", d: "Theories of change, logframes, indicator sheets and MEL plans that donors recognise." },
+    { t: "Business development consultant | SME coach & mentor", d: "Business model canvas, investment-ready business plans, funding proposals and one-to-one coaching for SMEs and agribusinesses." },
     { t: "Reporting automation", d: "Make.com and Python workflows that remove repetitive reporting tasks." },
-    { t: "Training & capacity building", d: "Hands-on training for staff, partners and enumerators." }
+    { t: "Training & capacity building", d: "Hands-on training for staff, partners, enumerators and entrepreneurs." }
+  
   ]
 };
