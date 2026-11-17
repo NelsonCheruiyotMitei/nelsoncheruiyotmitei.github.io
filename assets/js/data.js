@@ -129,7 +129,7 @@ window.PORTFOLIO = {
       points: ["Trained and coordinated census enumerators on digital data collection procedures, supporting field teams to meet data quality and coverage standards"] },
     { when: "Mar – Jul 2019", role: "Project Coordinator", org: "National Integrated Identity Management System (NIIMS) · digital biometric registration", where: "Bureti Sub-county, Kericho County",
       points: ["Trained and supervised enumerators on digital biometric registration, coordinating field teams and monitoring registration progress and data quality"] },
-    { when: "Mar 2018 – Mar 2019", role: "ICT Officer", org: "ICT Authority · Digital Literacy Programme (with Kenya News Agency ICT support)", where: "Kenya",
+    { when: "Mar 2018 – Mar 2019", role: "ICT Officer (Presidential Digital Talent)", org: "ICT Authority · Digital Literacy Programme (with Kenya News Agency ICT support)", where: "Kenya",
       points: ["Provided ICT support for the national Digital Literacy Programme, maintaining devices and systems and supporting users"] }
   ],
 
@@ -253,7 +253,8 @@ window.PORTFOLIO = {
     { t: "Survey data cleaning & analysis", d: "Clean, deduplicated, analysis-ready datasets with a clear report of findings." },
     { t: "Digital data collection", d: "KoboToolbox, ODK and CommCare forms with built-in validation and skip logic." },
     { t: "MEL systems & frameworks", d: "Theories of change, logframes, indicator sheets and MEL plans that donors recognise." },
-    { t: "Reporting automation", d: "Make.com and Python workflows that remove repetitive reporting tasks." },
+    { t: "Reporting automation", d: "Automated reporting pipelines that feed KoboToolbox data straight into Power BI, plus Make.com and Python workflows that remove repetitive reporting tasks." },
+    { t: "Resource mobilisation", d: "Support for organisations and individuals applying for grants: finding funding opportunities, writing concept notes and full proposals, and building the theory of change and results framework funders expect." },
     { t: "Training & capacity building", d: "Hands-on training for staff, partners, enumerators and entrepreneurs." }
   ]
 };
