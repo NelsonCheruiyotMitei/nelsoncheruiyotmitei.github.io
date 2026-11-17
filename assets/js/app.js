@@ -59,12 +59,12 @@
 
   // KPI cards with count-up
   const kpiWrap = $("#kpis");
-  P.kpis.forEach(k => kpiWrap.append(h("div", "kpi", `<b data-to="${k.value}" data-suf="${k.suffix}">0${k.suffix}</b><span>${k.label}</span>`)));
+  P.kpis.forEach(k => kpiWrap.append(h("div", "kpi", `<b data-to="${k.value}" data-pre="${k.prefix || ""}" data-suf="${k.suffix}">${k.prefix || ""}0${k.suffix}</b><span>${k.label}</span>${k.src ? `<small>${k.src}</small>` : ""}`)));
   const countUp = el => {
-    const to = +el.dataset.to, suf = el.dataset.suf, t0 = performance.now(), dur = 1600;
+    const to = +el.dataset.to, pre = el.dataset.pre || "", suf = el.dataset.suf, t0 = performance.now(), dur = 1600;
     (function step(t) {
       const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * e).toLocaleString() + suf;
+      el.textContent = pre + Math.round(to * e).toLocaleString() + suf;
       if (p < 1) requestAnimationFrame(step);
     })(t0);
   };
@@ -225,6 +225,14 @@
     pWrap.append(card);
   });
 
+  /* ---------- Testimonials ---------- */
+  const qWrap = $("#quotes");
+  (P.testimonials || []).forEach(t => qWrap.append(h("figure", "quote", `
+    <blockquote>“${t.quote}”</blockquote>
+    <figcaption><b>${t.name}</b><span>${t.role}</span><small>${t.source} · ${t.date}</small></figcaption>`)));
+  if (P.testimonialsLink) { const a = h("a", "more", "Read more recommendations on LinkedIn →"); a.href = P.testimonialsLink; a.target = "_blank"; a.rel = "noopener"; qWrap.after(a); }
+  if (!(P.testimonials || []).length) qWrap.parentElement.remove();
+
   const modal = $("#modal");
   function openProject(p) {
     $("#modalBody").innerHTML = `
@@ -337,35 +345,24 @@
     upsert("subs", "#cSubs", { type: "line", data: { labels: weeks.map((_, i) => "Wk " + (i + 1)), datasets: [{ data: weeks, borderColor: pal.a, backgroundColor: pal.a + "33", fill: true, tension: .4, pointRadius: 3 }] }, options: baseOpts() });
   }
 
-  /* ---------- Skills ---------- */
-  function renderRadar() {
-    const pal = palette();
-    charts.radar?.destroy();
-    charts.radar = new Chart($("#cRadar"), {
-      type: "radar",
-      data: { labels: P.skills.map(s => s.name), datasets: [{ data: P.skills.map(s => s.level), backgroundColor: pal.a + "33", borderColor: pal.a, pointBackgroundColor: pal.b, pointRadius: 4 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
-        scales: { r: { min: 0, max: 100, ticks: { display: false, stepSize: 25 }, grid: { color: pal.line }, angleLines: { color: pal.line }, pointLabels: { color: pal.text, font: { size: 12 } } } } }
-    });
-  }
-  const chipWrap = $("#skillChips"), sRes = $("#skillResult");
+  /* ---------- Skills: evidence, not self-ratings ---------- */
+  const toolGrid = $("#toolGrid");
   P.skills.forEach(s => {
-    const c = h("button", "chip", s.name);
-    c.addEventListener("click", () => {
-      $$(".chip", chipWrap).forEach(x => x.classList.remove("on")); c.classList.add("on");
-      const keys = s.name.toLowerCase().split(/\s*\/\s*/);
-      const hits = P.projects.filter(p => p.tools.some(t => keys.some(k => t.toLowerCase().includes(k) || k.includes(t.toLowerCase()))));
-      sRes.innerHTML = `<div><b>${s.name}</b><div class="bar"><i></i></div><small class="muted">Proficiency ${s.level}/100</small></div>`;
-      requestAnimationFrame(() => $(".bar i", sRes).style.width = s.level + "%");
-      if (!hits.length) sRes.append(h("p", "muted", "Used across my survey analysis and reporting work. See the journey section for details."));
-      hits.forEach((p, i) => {
-        const d = h("div", "skill-hit", `<b>${p.title}</b><p>${p.org} · ${p.year}</p>`);
-        d.style.animationDelay = i * 70 + "ms";
-        d.addEventListener("click", () => openProject(p));
-        sRes.append(d);
+    const keys = s.name.toLowerCase().split(/\s*\/\s*/);
+    const hits = P.projects.filter(p => p.tools.some(t => keys.some(k => t.toLowerCase().includes(k) || k.includes(t.toLowerCase()))));
+    const card = h("div", "tool reveal", `
+      <div class="tool-head"><h4>${s.name}</h4>${hits.length ? `<span class="tool-count">${hits.length} case ${hits.length > 1 ? "studies" : "study"}</span>` : ""}</div>
+      ${s.evidence ? `<p class="tool-ev">${s.evidence}</p>` : ""}`);
+    if (hits.length) {
+      const ul = h("ul", "tool-hits");
+      hits.forEach(p => {
+        const b = h("button", null, `${p.title}<span>${p.org} · ${p.year}</span>`);
+        b.addEventListener("click", () => openProject(p));
+        const li = h("li"); li.append(b); ul.append(li);
       });
-    });
-    chipWrap.append(c);
+      card.append(ul);
+    }
+    toolGrid.append(card);
   });
 
   /* ---------- Map ---------- */
@@ -417,7 +414,7 @@
   const cl = $("#contactLinks"), L2 = P.person.links;
   const addLink = (label, url) => { if (!isPlaceholder(url)) { const a = h("a", "btn btn-ghost btn-sm", label); a.href = url; if (/^https?:/.test(url)) { a.target = "_blank"; a.rel = "noopener"; } cl.append(a); } };
   if (!isPlaceholder(P.person.email)) addLink("✉ " + P.person.email, "mailto:" + P.person.email);
-  if (!isPlaceholder(P.person.phone)) addLink("☎ " + P.person.phone.replace(/^(\+254)(\d{3})(\d{3})(\d{3})$/, "$1 $2 $3 $4"), "tel:" + P.person.phone);
+  if (!isPlaceholder(P.person.phone)) addLink("WhatsApp", "https://wa.me/" + P.person.phone.replace(/\D/g, ""));
   addLink("LinkedIn", L2.linkedin); addLink("Upwork", L2.upwork); addLink("Fiverr", L2.fiverr); addLink("GitHub", L2.github);
 
   $("#contactForm").addEventListener("submit", async e => {
@@ -452,7 +449,7 @@
   const lazy = new IntersectionObserver(entries => entries.forEach(en => {
     if (!en.isIntersecting) return;
     if (en.target.id === "demo") renderDash();
-    if (en.target.id === "skills") { renderRadar(); initMap(); setTimeout(() => map && map.invalidateSize(), 300); }
+    if (en.target.id === "skills") { initMap(); setTimeout(() => map && map.invalidateSize(), 300); }
     if (en.target.id === "toc") setTimeout(drawLines, 900);
     lazy.unobserve(en.target);
   }), { rootMargin: "200px" });
@@ -460,6 +457,5 @@
 
   function refreshCharts() {
     if (charts.adopt) { ["adopt", "yield", "gender", "subs"].forEach(k => { charts[k].destroy(); delete charts[k]; }); renderDash(); }
-    if (charts.radar) renderRadar();
   }
 })();

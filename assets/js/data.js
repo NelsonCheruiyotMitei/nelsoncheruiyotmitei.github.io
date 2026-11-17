@@ -8,18 +8,18 @@ window.PORTFOLIO = {
   person: {
     name: "Nelson Cheruiyot Mitei",
     shortName: "Nelson Mitei",
-    brand: "MEL Genius",
+    brand: "MEL Consultant",
     title: "Monitoring, Evaluation and Learning (MEL) Specialist | Data Analytics and Power BI | Digital Data Collection",
     tagline: "Turning programme data into decisions.",
     roles: ["MEL Specialist", "Power BI Developer", "Systems-informed MEL Practitioner", "Results Framework Designer", "Digital Data Collection Expert"],
     location: "Nairobi, Kenya",
     summary:
-      "I design and strengthen MEL systems for donor-funded youth employment, digital skills and agriculture programmes in Kenya. Over 6+ years I have built results frameworks, digital data collection systems and Power BI dashboards that turn field data into clear evidence for programme managers and donors, including as Regional MEL Lead on the Mastercard Foundation-funded Ajira Digital Programme.",
+      "I design and strengthen MEL systems for donor-funded youth employment, digital skills and agriculture programmes in Kenya. In 6+ years I have built results frameworks, digital data collection systems and Power BI dashboards that turn field data into clear evidence for programme managers and donors, including as Regional MEL Lead on the Mastercard Foundation-funded Ajira Digital Programme.",
     availability: "Available for remote, home-based and on-site roles (EAT, UTC+3)",
-    photo: "", // e.g. "assets/img/nelson.jpg"; leave empty to show initials
+    photo: "", // e.g. "assets/img/nelson.webp"; leave empty to show initials
     cv: "assets/Nelson-Mitei-CV.pdf", // add your CV PDF with this exact name
     email: "mcmitey@gmail.com",
-    phone: "+254712358810",
+    phone: "+254712358810", // shown as a WhatsApp link, not as plain text
     // Contact form: FormSubmit (no account needed). The FIRST message sends a one-time
     // activation email to this address; click "Activate" in it and the form works from then on.
     formEndpoint: "https://formsubmit.co/ajax/mcmitey@gmail.com",
@@ -31,13 +31,14 @@ window.PORTFOLIO = {
     }
   },
 
+  // Hero "Key results" cards. src = where the number comes from (shown under each card)
   kpis: [
-    { value: 6, suffix: "+", label: "Years in MEL & data" },
-    { value: 659, suffix: "", label: "Farmers in one survey I led" },
-    { value: 25, suffix: "%", label: "Better data accuracy" },
-    { value: 40, suffix: "%", label: "Faster reporting with Power BI" },
-    { value: 100, suffix: "%", label: "Donor reporting compliance" },
-    { value: 30, suffix: "+", label: "Staff & partners trained" }
+    { value: 6, suffix: "+", label: "Years in MEL & data", src: "2018 to date" },
+    { value: 659, suffix: "", label: "Farmers in one survey I led", src: "SEMA II, Makueni, 2026" },
+    { value: 25, prefix: "+", suffix: "%", label: "Data accuracy", src: "Ajira Digital · routine DQA results" },
+    { value: 40, suffix: "%", label: "Faster reporting with Power BI", src: "Ajira Digital · reporting turnaround" },
+    { value: 100, suffix: "%", label: "Donor reporting compliance", src: "Ajira Digital · Mastercard Foundation" },
+    { value: 30, suffix: "+", label: "Staff & partners trained", src: "Ajira Digital, 2020–2026" }
   ],
 
   // Organisations and programmes I have worked with (scrolling strip under the hero)
@@ -66,7 +67,7 @@ window.PORTFOLIO = {
       { id: "a4", t: "Clean & analyse data", d: "Python, SPSS and STATA workflows for cleaning, deduplication and analysis of large survey datasets.", to: ["o1", "o4"],
         ind: "Datasets cleaned, validated and analysed", mov: "Cleaning logs; analysis scripts", ex: "SEMA II: 659 × 226 dataset", as: "Raw data is complete enough to analyse" },
       { id: "a5", t: "Visualise & automate", d: "Power BI dashboards and Make.com automations that remove manual reporting work.", to: ["o1"],
-        ind: "Dashboards and automated workflows delivered", mov: "Published dashboards; workflow logs", ex: "Ajira Digital dashboards · TrendHub", as: "Data sources are updated on schedule" }
+        ind: "Dashboards and automated workflows delivered", mov: "Published dashboards; workflow logs", ex: "Ajira Digital dashboards", as: "Data sources are updated on schedule" }
     ]},
     { col: "Outputs", stat: "30+ trained · 659 farmers surveyed", items: [
       { id: "o1", t: "Decision dashboards", d: "Power BI dashboards for programme teams and donors, including the SEMA II horticulture dashboard and Ajira Digital reporting.", to: ["c1"],
@@ -189,33 +190,26 @@ window.PORTFOLIO = {
       built: "An EU-style intervention logic with outcomes, outputs, indicators, means of verification and assumptions.",
       result: "A funder-ready results framework the group can use for reporting.",
       chart: null
-    },
-    {
-      id: "trendhub", title: "TrendHub Kenya: automated content engine", org: "Personal venture", year: "2026",
-      sector: "Automation", tools: ["Make.com", "APIs", "AI"],
-      summary: "A Facebook page that publishes 9 AI-written posts a day with no manual work.",
-      problem: "Running a daily news page by hand takes hours every day.",
-      built: "A Make.com scenario linking RSS feeds, the Claude API and the Facebook Graph API, triggered on a schedule.",
-      result: "Nine posts a day across three time slots, fully automated. The same skills apply to automating M&E reporting.",
-      chart: { type: "bar", label: "Posts per time slot", labels: ["Morning", "Afternoon", "Evening"], data: [3, 3, 3] }
     }
   ],
 
-  /* ---------- Skills (self-rated 0–100; adjust as you like) ---------- */
+  /* ---------- Skills: each tool is backed by projects and/or a certificate ---------- */
+  // The case studies that used a tool are found automatically from each project's "tools" list.
+  // evidence = extra proof (certificate or where you used it) shown on the tool's card.
   skills: [
-    { name: "MEL frameworks", level: 95 },
-    { name: "Power BI", level: 92 },
-    { name: "KoboToolbox", level: 90 },
-    { name: "Excel", level: 90 },
-    { name: "Python", level: 70 },
-    { name: "SPSS / STATA", level: 78 },
-    { name: "GIS", level: 65 },
-    { name: "Make.com", level: 80 }
+    { name: "MEL frameworks", evidence: "Certified in Results-Based Management and in Theory of Change & Results Frameworks" },
+    { name: "Power BI", evidence: "Certified: Microsoft Power BI Desktop for Business Intelligence" },
+    { name: "KoboToolbox", evidence: "Certified: KoboToolbox Data Collection and Management" },
+    { name: "Excel", evidence: "Certified: Advanced Microsoft Excel for Data Analysis" },
+    { name: "Python", evidence: "pandas cleaning workflow for the 659 × 226 SEMA II dataset" },
+    { name: "SPSS / STATA", evidence: "Certified: SPSS for Data Analysis and Research" },
+    { name: "GIS", evidence: "Geography page of the SEMA II Power BI dashboard" },
+    { name: "Make.com", evidence: "Scheduled, API-driven automation workflows built in personal projects" }
   ],
 
   /* ---------- Places on the map ---------- */
   places: [
-    { name: "Nairobi", lat: -1.2864, lng: 36.8172, note: "Home base · MEL Genius consulting" },
+    { name: "Nairobi", lat: -1.2864, lng: 36.8172, note: "Home base · MEL consulting" },
     { name: "Makueni County", lat: -1.8036, lng: 37.6203, note: "SEMA II horticulture survey & dashboard (2026)" },
     { name: "South Rift region", lat: -0.3031, lng: 36.0800, note: "Ajira Digital Programme, Regional MEL Lead (2020–2026)" },
     { name: "Bureti, Kericho County", lat: -0.5850, lng: 35.1900, note: "NIIMS digital registration, Project Coordinator (2019)" },
@@ -223,16 +217,24 @@ window.PORTFOLIO = {
     { name: "Kapsosurwo, Sotik", lat: -0.6800, lng: 35.1200, note: "The Golden Abosi Kapsosurwo CBO (co-founder)" }
   ],
 
+  /* ---------- Testimonials (shown under the case studies) ---------- */
+  // Copy recommendations word for word from LinkedIn.
+  testimonials: [
+    { quote: "Nelson is a natural leader with a wealth of knowledge in consulting, training, strategy and the digital space. He follows through and is an ever present figure in each step of the journey. Nelson's tenacity seeps through everything that he touches and any organization/individual will be privileged to tap into his skillset.",
+      name: "Akoko Achieng", role: "Customer Experience Leader · CX Strategy", date: "November 2021", source: "LinkedIn recommendation" }
+  ],
+  testimonialsLink: "https://www.linkedin.com/in/nelsonmitei/details/recommendations/",
+
   /* ---------- Gallery ("Work in action") ---------- */
   // Faces and client figures are blurred on purpose. Add new images to assets/img/gallery/
   gallery: [
-    { img: "assets/img/gallery/participatory-learning.jpg", title: "Participatory Learning & Adaptation",
+    { img: "assets/img/gallery/participatory-learning.webp", title: "Participatory Learning & Adaptation",
       caption: "Participatory learning-focused session with programme participants engaged in group reflection and discussion.", tag: "Learning" },
-    { img: "assets/img/gallery/evaluation-dashboard.jpg", title: "Evaluation & Data Analysis",
+    { img: "assets/img/gallery/evaluation-dashboard.webp", title: "Evaluation & Data Analysis",
       caption: "Power BI dashboard presenting evaluation findings, agricultural outcomes, yield and income changes, market access and adoption.", tag: "Power BI" },
-    { img: "assets/img/gallery/business-analysis.jpg", title: "Business Analysis Dashboard",
+    { img: "assets/img/gallery/business-analysis.webp", title: "Business Analysis Dashboard",
       caption: "Interactive sales dashboard with profit by product, customer and pricing segment, and country filters.", tag: "Business intelligence" },
-    { img: "assets/img/gallery/youth-tracking.jpg", title: "Youth Enrolment-to-Employment Tracking",
+    { img: "assets/img/gallery/youth-tracking.webp", title: "Youth Enrolment-to-Employment Tracking",
       caption: "Tracking youth from enrolment to employment: joining, completion, transition to work, barriers and investor return.", tag: "Excel analytics" }
   ],
 
@@ -251,7 +253,6 @@ window.PORTFOLIO = {
     { t: "Survey data cleaning & analysis", d: "Clean, deduplicated, analysis-ready datasets with a clear report of findings." },
     { t: "Digital data collection", d: "KoboToolbox, ODK and CommCare forms with built-in validation and skip logic." },
     { t: "MEL systems & frameworks", d: "Theories of change, logframes, indicator sheets and MEL plans that donors recognise." },
-    { t: "Business development consultant | SME coach & mentor", d: "Business model canvas, investment-ready business plans, funding proposals and one-to-one coaching for SMEs and agribusinesses." },
     { t: "Reporting automation", d: "Make.com and Python workflows that remove repetitive reporting tasks." },
     { t: "Training & capacity building", d: "Hands-on training for staff, partners, enumerators and entrepreneurs." }
   ]

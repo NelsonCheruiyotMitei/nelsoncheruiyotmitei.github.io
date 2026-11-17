@@ -1,4 +1,4 @@
-# Nelson Mitei · MEL Genius portfolio
+# Nelson Mitei · MEL Consultant portfolio
 
 An interactive portfolio website built with plain HTML, CSS and JavaScript. It has no build step, so GitHub Pages can host it for free exactly as it is.
 
@@ -7,10 +7,12 @@ An interactive portfolio website built with plain HTML, CSS and JavaScript. It h
 | File | What it does |
 |---|---|
 | `index.html` | Page structure (you rarely need to edit this) |
-| `assets/js/data.js` | **All your content.** Edit this to change text, projects, jobs, skills, certificates and map pins |
+| `assets/js/data.js` | **All your content.** Edit this to change text, projects, jobs, skills, testimonials, certificates and map pins |
 | `assets/js/app.js` | Interactivity: Theory of Change, filters, demo dashboard, map, timeline |
 | `assets/css/style.css` | Design, colours, dark/light mode |
 | `assets/vendor/` | Chart.js and Leaflet, bundled locally so nothing breaks |
+| `assets/img/og-image.png` | The picture shown when the link is shared on LinkedIn, WhatsApp etc. |
+| `sitemap.xml`, `robots.txt` | Help Google find and index the site |
 
 ## Put it live on GitHub Pages (about 10 minutes)
 
@@ -33,12 +35,15 @@ The contact form uses FormSubmit, which needs no account.
 
 - [ ] `links.upwork` in `data.js`: add your Upwork profile URL (hidden until you do)
 - [ ] `photo`: upload a photo to `assets/img/` and put its path in `data.js`
-- [ ] `skills`: the proficiency scores are estimates; adjust them to your own judgement
+- [ ] `skills`: each tool shows its evidence (case studies + certificate); update `evidence` when you earn a new certificate
+- [ ] `testimonials`: add more LinkedIn recommendations, copied word for word
+- [ ] `kpis`: add baseline years to the `src` lines if you have them (e.g. "DQA scores, 2021 → 2023")
+- [ ] After a big content change, update `<lastmod>` in `sitemap.xml`
 - [ ] When you fine-tune your CV, replace `assets/Nelson-Mitei-CV.pdf` with a new PDF of the same name
 
 ## Privacy rules for images
 
-Images live in `assets/img/gallery/` and are listed under `gallery` in `data.js`. Before adding a new one:
+Images live in `assets/img/gallery/` (WebP format keeps them small; JPG also works) and are listed under `gallery` in `data.js`. Before adding a new one:
 - Blur participants' faces unless you have written consent
 - Blur client figures unless the client has approved publishing them
 - Don't publish recruitment test materials
